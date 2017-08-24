@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>H5/C3图片hover事件</title>
+		
+		<style>
+			*{margin:0 auto;padding: 0;font:15px "微软雅黑";}
+			body{width: 100%;background: rgb(236,236,236);}
+			.contanier{width: 90%;}
+			.contanier>div{width: 30%;padding: 8px;margin: 5px;background: white;float: left;}
+			figure{width: 100%;overflow: hidden;position: relative;}
+			figcaption{position: absolute;top: 50px;left: 50px;color: white;font-size: 30px;}
+			p{line-height: 28px;}
+			@media screen and (min-width:1001px ) {
+				.contanier>div{width: 30%;}
+			}
+			@media screen and (max-width:1000px ) {
+				.contanier>div{width: 45%;}
+			}
+			@media screen and (max-width:600px ) {
+				.contanier>div{width: 97%;}
+			}
+			img{width: 100%;transition:all 1s;}
+			.fig1 img:hover{
+				transform: scale(1.2,1.2);
+				opacity: .7;
+			}
+			.fig2 img:hover{
+				transform: rotate(360deg);
+				/*transform-origin: 0 0;*/
+			}
+		</style>
+	</head>
+	<body>
+		<div class="contanier">
+			<div>
+				<figure class="fig1">
+					<img src="img/peitu5.jpg" alt="" />	
+					<figcaption>在路上</figcaption>
+				</figure>
+				<p>风景旅行</p>
+			</div>
+			<div>
+				<figure class="fig2">
+					<img src="img/peitu2.jpg" alt="" />
+				</figure>	
+				<p>风景旅行</p>
+			</div>
+			<div>
+				<figure class="fig3">
+					<img src="img/peitu7.jpg" alt="" />
+				</figure>
+				<p>风景旅行</p>
+			</div>
+			<div>
+				<figure class="fig4">
+					<img src="img/peitu4.jpg" alt="" />
+				</figure>
+				<p>风景旅行</p>
+			</div>
+		</div>
+	</body>
+</html>
