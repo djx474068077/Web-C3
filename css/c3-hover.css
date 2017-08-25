@@ -1,0 +1,55 @@
+*{margin:0 auto;padding: 0;font:15px "微软雅黑";}
+body{width: 100%;background: wheat;}
+.contanier{width: 90%;}
+.contanier>div{width: 31%;margin: 5px;float: left;}
+.contanier>div>div{padding: 8px;background: white;margin-bottom: 8px;}
+figure{width: 100%;overflow: hidden;position: relative;}
+figcaption{position: absolute;top:0;left:0;padding:40px;color: white;}
+.contanier>div>div>p{line-height: 28px;}
+h2{font-size: 30px;}
+@media screen and (min-width:1001px ) {
+	.contanier>div{width: 32%;}
+}
+@media screen and (max-width:1000px ) {
+	.contanier>div{width: 48%;}
+}
+@media screen and (max-width:600px ) {
+	.contanier>div{width: 97%;}
+}
+
+figure img,p,h2,div,span{transition:all 0.8s;}
+
+
+.fig1 figcaption p{background: whitesmoke;color: gray;margin: 4px;text-align: center;transform: translate(-150px,0);}
+.fig1 figcaption p:nth-of-type(1){transition-delay: 0.08s;}
+.fig1 figcaption p:nth-of-type(2){transition-delay: 0.16s;}
+.fig1 figcaption p:nth-of-type(3){transition-delay: 0.24s;}
+.fig1 figcaption h2{transform: translate(0,-100px);}
+
+.fig1:hover img{transform: scale(1.2,1.2);opacity: .8;}
+.fig1:hover figcaption p,.fig1:hover figcaption h2{transform: translate(0,0);}
+
+
+.fig2 figcaption div{width: 280px;height: 260px;border: 3px solid whitesmoke;position: absolute;
+transform: translate(0,-340px) rotate(180deg);}
+.fig2 figcaption h2{color: coral;position:absolute;left: -120px;top:80px;transform: skewX(0);}
+.fig2:hover figcaption h2{width:200px;animation: first 1s forwards;}
+/*@keyframes first{
+	0%{left: -120px;transform: skew(0,0);}
+	70%{left: 40px;transform: skew(0,0);}
+	80%{left: 40px;transform: skew(20px,0);}
+	100%{left: 40px;transform: skew(0,0);}
+}*/
+@-webkit-keyframes first{
+	0%{left: -120px;transform: skewX(0);}
+	60%{left: 40px;transform: skewX(0);}
+	80%{left: 60px;transform: skewX(-40deg);}
+	100%{left:60px;transform: skewX(0);}
+}
+.fig2:hover figcaption div{
+	transform: translate(0,0) rotate(0);
+	/*transform-origin: 0 0;*/
+}
+.fig3 img:hover{
+	transform: translate(50px,0);
+}
